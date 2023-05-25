@@ -18,39 +18,39 @@ public class MainProgram{
 
 	// Buttons
 	JButton modbtn;
-		JButton CEbtn;
-		JButton Cbtn;
-		JButton backbtn;
+	JButton CEbtn;
+	JButton Cbtn;
+	JButton backbtn;
 
-		// Row 2
-		JButton oneOverX;
-		JButton xSquare;
-		JButton rootX;
-		JButton dividebtn;
+	// Row 2
+	JButton oneOverX;
+	JButton xSquare;
+	JButton rootX;
+	JButton dividebtn;
 
-		// Row 3
-		JButton num7;
-		JButton num8;
-		JButton num9;
-		JButton timesbtn;
+	// Row 3
+	JButton num7;
+	JButton num8;
+	JButton num9;
+	JButton timesbtn;
 
-		// Row 4
-		JButton num4;
-		JButton num5;
-		JButton num6;
-		JButton minusbtn;
+	// Row 4
+	JButton num4;
+	JButton num5;
+	JButton num6;
+	JButton minusbtn;
 
-		// Row 5
-		JButton num1;
-		JButton num2;
-		JButton num3;
-		JButton addbtn;
+	// Row 5
+	JButton num1;
+	JButton num2;
+	JButton num3;
+	JButton addbtn;
 
-		// Row 6
-		JButton posnegBtn;
-		JButton num0;
-		JButton dot;
-		JButton equal;
+	// Row 6
+	JButton posnegBtn;
+	JButton num0;
+	JButton dot;
+	JButton equal;
 
 	// private int answer;
 	// Constract and Initialization
@@ -268,6 +268,42 @@ public class MainProgram{
 				// Code to run when the button is clicked
 				MainProgram.textField.setText(MainProgram.textField.getText() + "9");
 				check_number_input();
+			}
+		});
+
+		this.oneOverX.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double curr_num = Double.parseDouble(MainProgram.textField.getText());
+				double num = 1 / curr_num;
+				MainProgram.textField.setText(num + "");
+			}
+		});
+
+		this.xSquare.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double curr_num = Double.parseDouble(MainProgram.textField.getText());
+				double num = Math.pow(curr_num, 2);
+				MainProgram.textField.setText(num + "");
+			}
+		});
+		
+		this.rootX.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double curr_num = Double.parseDouble(MainProgram.textField.getText());
+				double num = Math.sqrt(curr_num);
+				MainProgram.textField.setText(num + "");
+			}
+		});
+
+		this.posnegBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double curr_num = Double.parseDouble(MainProgram.textField.getText()); 
+				double num = curr_num * (-1);
+				MainProgram.textField.setText(num + "");
 			}
 		});
 
