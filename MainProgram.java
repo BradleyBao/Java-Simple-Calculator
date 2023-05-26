@@ -88,7 +88,7 @@ public class MainProgram{
 		JButton modbtn = new JButton("%");
 		JButton CEbtn = new JButton("CE");
 		JButton Cbtn = new JButton("C");
-		JButton backbtn = new JButton("Backward");
+		JButton backbtn = new JButton("Back");
 
 		this.modbtn = modbtn;
 		this.CEbtn = CEbtn;
@@ -169,6 +169,9 @@ public class MainProgram{
                 constraints.gridy = i + 1; // Rows after the first
                 constraints.gridwidth = 1; // Span one column
                 frame.add(btns[i][j], constraints);
+
+				btns[i][j].setPreferredSize(new Dimension(110, 30));
+				btns[i][j].setFont(new Font("Arial", Font.BOLD, 18));
 			}
 		}
 		
